@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>
+        <h1>Temperature Converter</h1>
+        <h2>Type a value in the Fahrenheit field to convert the value to Celcius </h2>
+        <h2>    Fahrenheit
+            <input id="text" type="number" oninput="temperatureConverter(this.value)">
+        </h2>
+    </p>
+    <p>Celsius: <span id="ouputCelsious"></span></p>
+    <script>
+        // valNum là độ F cần đổi sang độ C
+        function temperatureConverter(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById('ouputCelsious').innerHTML = (valNum-32)/1.8;
+        }
+    </script>
+</body>
+</html>
